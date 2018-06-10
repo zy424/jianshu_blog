@@ -9,15 +9,15 @@ class PostController extends Controller
 {
     // articles list
     public function index() {
-        $posts = Post::orderby('create_at','desc')->get();
+        $posts = Post::orderby('created_at','desc')->paginate(6);
         return view("post/index", compact('posts'));
 
     }
 
     // article page
-    public function show() {
+    public function show(Post $post) {
 
-        return view("post/show", ['']);
+        return view("post/show", compact('post'));
 
     }
 
@@ -29,6 +29,15 @@ class PostController extends Controller
 
     // create logic
     public function store() {
+        /*$post = new Post();
+        $post->title = request('title');
+        $post->content = request('content');
+        $post->save();*/
+
+        //$params = ['title'=>request('title'),'content' => request('content')];
+        $params = request(['title','content']);
+        $post = Post::create($params);
+        return redirect("/posts");
 
     }
 
