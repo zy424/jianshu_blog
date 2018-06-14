@@ -34,9 +34,18 @@ class PostController extends Controller
         $post->content = request('content');
         $post->save();*/
 
+        //validate
+        $this->validate(request(),[
+            'title' => "required|string|max:100|min:5",
+            'content' => "required|string|min:10",
+        ]);
+
+        // logic
         //$params = ['title'=>request('title'),'content' => request('content')];
         $params = request(['title','content']);
         $post = Post::create($params);
+
+        //render
         return redirect("/posts");
 
     }
