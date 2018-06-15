@@ -12,6 +12,7 @@ class PostController extends Controller
         $posts = Post::orderby('created_at','desc')->paginate(6);
         return view("post/index", compact('posts'));
 
+
     }
 
     // article page
@@ -51,13 +52,26 @@ class PostController extends Controller
     }
 
     // edit page
-    public function edit() {
-        return view("post/edit");
+    public function edit(Post $post) {
+        return view("post/edit", compact('post'));
 
     }
 
     // edit logic
-    public function update() {
+    public function update(Post $post) {
+        //validate
+        $this->validate(request(),[
+            'title' => "required|string|max:100|min:5",
+            'content' => "required|string|min:10",
+        ]);
+
+        //logic
+        $post->title = request('title');
+        $post->content = request('content');
+        $post->save();
+
+        //render
+        return redirect("/posts/{$post->id}");
 
     }
 
