@@ -31,7 +31,7 @@ Route::get('/posts/{post}/edit', '\App\Http\Controllers\PostController@edit');
 Route::put('/posts/{post}', '\App\Http\Controllers\PostController@update');
 
 //The page of deleting articles
-Route::get('/posts/delete', '\App\Http\Controllers\PostController@delete');
+Route::get('/posts/{post}/delete', '\App\Http\Controllers\PostController@delete');
 
 //Upload images
 Route::post('/posts/img/upload','\App\Http\Controllers\PostController@imageUpload');

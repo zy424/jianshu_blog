@@ -76,8 +76,12 @@ class PostController extends Controller
     }
 
     // delete logic
-    public function delete() {
+    public function delete(Post $post) {
+        //TODO: authorization validation
 
+
+        $post->delete();
+        return redirect("/posts");
     }
 
     // upload image
