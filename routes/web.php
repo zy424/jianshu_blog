@@ -11,6 +11,29 @@
 |
 */
 
+//User section
+
+//register page
+Route::get('/register', '\App\Http\Controllers\RegisterController@index');
+//register behaviour
+Route::post('/register', '\App\Http\Controllers\RegisterController@register');
+
+//login page
+Route::get('/login', '\App\Http\Controllers\LoginController@index');
+//login behaviour
+Route::post('/login', '\App\Http\Controllers\LoginController@login');
+//logout behaviour
+Route::get('/logout', '\App\Http\Controllers\LoginController@logout');
+
+//personal setting page
+Route::get('/user/me/setting', '\App\Http\Controllers\UserController@setting');
+//personal setting operation
+Route::post('/user/me/setting', '\App\Http\Controllers\UserController@settingStore ');
+
+
+
+
+//Article section
 Route::get('/', function () {
     return view('welcome');
 });
