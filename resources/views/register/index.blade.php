@@ -5,12 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>注册</title>
+    <title>Register</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -34,18 +33,19 @@
 <div class="container">
 
     <form class="form-signin" method="POST" action="/register">
-        <input type="hidden" name="_token" value="MESUY3topeHgvFqsy9EcM916UWQq6khiGHM91wHy">
-        <h2 class="form-signin-heading">请注册</h2>
-        <label for="name" class="sr-only">名字</label>
-        <input type="text" name="name" id="name" class="form-control" placeholder="名字" required autofocus>
-        <label for="inputEmail" class="sr-only">邮箱</label>
-        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="邮箱" required autofocus>
-        <label for="inputPassword" class="sr-only">密码</label>
-        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="输入密码" required>
-        <label class="sr-only">重复密码</label>
-        <input type="password" name="password_confirmation" class="form-control" placeholder="重复输入密码" required>
+        {{csrf_field()}}
+        <h2 class="form-signin-heading">Register</h2>
+        <label for="name" class="sr-only">Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Name" required autofocus>
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <label class="sr-only">Repeat password</label>
+        <input type="password" name="password_confirmation" class="form-control" placeholder="Password again" required>
 
-                <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        @include('layout.error')
     </form>
 
 </div> <!-- /container -->
