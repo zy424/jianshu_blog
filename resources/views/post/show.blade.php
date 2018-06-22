@@ -5,16 +5,21 @@
     <div class="col-sm-8 blog-main">
         <div class="blog-post">
             <div style="display:inline-flex">
-                    <h2 class="blog-post-title">{{$post->title}}</h2>
-                                        <a style="margin: auto"  href="/posts/{{$post->id}}/edit">
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                    </a>
-                    <a style="margin: auto"  href="/posts/{{$post->id}}/delete">
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    </a>
-                                </div>
+                <h2 class="blog-post-title">{{$post->title}}</h2>
+                @can('update', $post)
+                <a style="margin: auto"  href="/posts/{{$post->id}}/edit">
+                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                </a>
+                @endcan
 
-            <p class="blog-post-meta">{{$post->created_at->toFormattedDateString()}} <a href="#">Kassandra Ankunding2</a></p>
+                @can('delete', $post)
+                <a style="margin: auto"  href="/posts/{{$post->id}}/delete">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </a>
+                @endcan
+            </div>
+
+            <p class="blog-post-meta">{{$post->created_at->toFormattedDateString()}} <a href="#">{{$post->user->name}}</a></p>
             {!! $post->content!!}
             <div>
                 <a href="/posts/{{$post->id}}/zan" type="button" class="btn btn-primary btn-lg">赞</a>

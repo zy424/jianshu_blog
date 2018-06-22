@@ -41,9 +41,11 @@ class PostController extends Controller
             'content' => "required|string|min:10",
         ]);
 
+
+
         // logic
-        //$params = ['title'=>request('title'),'content' => request('content')];
-        $params = request(['title','content']);
+        $user_id = \Auth::id();
+        $params = array_merge(request(['title','content']),compact('user_id'));
         $post = Post::create($params);
 
         //render
@@ -65,6 +67,8 @@ class PostController extends Controller
             'content' => "required|string|min:10",
         ]);
 
+        $this->authorize('update', $post);
+
         //logic
         $post->title = request('title');
         $post->content = request('content');
@@ -79,7 +83,7 @@ class PostController extends Controller
     public function delete(Post $post) {
         //TODO: authorization validation
 
-
+        $this->authorize('delete', $post);
         $post->delete();
         return redirect("/posts");
     }
