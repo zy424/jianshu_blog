@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Post;
+use \App\Comment;
 
 class PostController extends Controller
 {
@@ -92,6 +93,24 @@ class PostController extends Controller
     public function imageUpload(Request $request) {
         $path = $request->file('wangEditorH5File')->storePublicly(md5(time()));
         return asset('storage/'.$path);
+    }
+
+    //submit comment
+    public function comment(Post $post) {
+        //validate
+        $this->validate(request(),[
+            'content' => "required|min:10",
+        ]);
+
+        //logic
+        $comment = new Comment();
+        $comment-> user_id = \Auth::id();
+        $comment-> content = request('content');
+
+        $post->comments()->save($comment);
+
+        //render
+        return back();
     }
 
 }

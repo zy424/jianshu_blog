@@ -58,3 +58,6 @@ Route::get('/posts/{post}/delete', '\App\Http\Controllers\PostController@delete'
 
 //Upload images
 Route::post('/posts/img/upload','\App\Http\Controllers\PostController@imageUpload');
+
+//Submit comment
+Route::post('/posts/{post}/comment','\App\Http\Controllers\PostController@comment');
