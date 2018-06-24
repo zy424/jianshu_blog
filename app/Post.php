@@ -16,4 +16,15 @@ class Post extends Model
     public function comments() {
         return $this->hasMany('App\Comment') -> orderBy('created_at', 'desc');
     }
+
+    //like  build relationship with user
+    public function like($user_id) {
+        return $this->hasOne(\App\Like::class) -> where('user_id', $user_id);
+    }
+
+    //calculate all the likes number for the post
+    public function likes() {
+        return $this->hasMany(\App\Like::class);
+    }
+
 }

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \App\Post;
 use \App\Comment;
+use \App\Like;
+
 
 class PostController extends Controller
 {
@@ -110,6 +112,23 @@ class PostController extends Controller
         $post->comments()->save($comment);
 
         //render
+        return back();
+    }
+
+    // like and unlike
+
+    public function like(Post $post) {
+        $param = [
+            'user_id' => \Auth::id(),
+            'post_id' => $post -> id,
+        ];
+
+        Like::firstOrCreate($param);
+        return back();
+    }
+
+    public function unlike(Post $post) {
+        $post->like(\Auth::id())->delete();
         return back();
     }
 

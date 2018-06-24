@@ -61,3 +61,7 @@ Route::post('/posts/img/upload','\App\Http\Controllers\PostController@imageUploa
 
 //Submit comment
 Route::post('/posts/{post}/comment','\App\Http\Controllers\PostController@comment');
+
+//Like and unlike
+Route::get('/posts/{post}/like','\App\Http\Controllers\PostController@like');
+Route::get('/posts/{post}/unlike','\App\Http\Controllers\PostController@unlike');

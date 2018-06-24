@@ -22,8 +22,11 @@
             <p class="blog-post-meta">{{$post->created_at->toFormattedDateString()}} <a href="#">{{$post->user->name}}</a></p>
             {!! $post->content!!}
             <div>
-                <a href="/posts/{{$post->id}}/zan" type="button" class="btn btn-primary btn-lg">Thumbs Up</a>
-
+                @if($post->like(\Auth::id())->exists())
+                    <a href="/posts/{{$post->id}}/unlike" type="button" class="btn btn-default btn-lg">Unlike</a>
+                @else
+                    <a href="/posts/{{$post->id}}/like" type="button" class="btn btn-primary btn-lg">Like</a>
+                @endif
             </div>
         </div>
 
