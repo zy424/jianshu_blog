@@ -18,7 +18,7 @@ class PostController extends Controller
 
     // article page
     public function show(Post $post) {
-
+        $post->load('comments');
         return view("post/show", compact('post'));
 
     }
