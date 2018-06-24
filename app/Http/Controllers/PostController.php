@@ -12,10 +12,8 @@ class PostController extends Controller
 {
     // articles list
     public function index() {
-        $posts = Post::orderby('created_at','desc')->paginate(6);
+        $posts = Post::orderby('created_at','desc')->withCount(['comments','likes'])->paginate(6);
         return view("post/index", compact('posts'));
-
-
     }
 
     // article page
