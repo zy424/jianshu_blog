@@ -10,7 +10,7 @@
                 Welcome to Jianshu Blog
             </p>
             <p>
-                <strong><a href="/">Jianshu Blog</a></strong> Build with Laravel5.4
+                <strong><a href="/">Jianshu Blog</a></strong> build with Laravel5.4
             </p>
         </div>
     </aside>

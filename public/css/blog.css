@@ -3,7 +3,7 @@
  */
 
 body {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #555;
 }
 
@@ -149,13 +149,17 @@ h6, .h6 {
     color: #999;
 }
 
+.blog-post a:hover {
+    text-decoration: none;
+}
+
 
 /*
  * Footer
  */
 
 .blog-footer {
-    padding: 40px 0;
+    padding: 20px 0;
     color: #999;
     text-align: center;
     background-color: #f9f9f9;
@@ -182,7 +186,7 @@ h6, .h6 {
     line-height: 33px;
     margin: 0;
     padding: 0;
-    border: 1px solid #4d4f52;
+    border: 2px solid #528BC5;
     color: #4d4f52;
     font-size: 14pt;
     -webkit-border-radius: 4px;
@@ -202,4 +206,20 @@ h6, .h6 {
     -webkit-opacity: 1;
     -moz-opacity: 1;
     opacity: 1;
+}
+
+.navbar-nav>li>a {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar-nav>li>a:hover{
+    color: #528BC5;
+}
+
+.panel-default>.panel-heading {
+    font-size: 14px;
+    font-weight:bold;
 }
