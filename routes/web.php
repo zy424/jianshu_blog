@@ -34,9 +34,7 @@ Route::post('/user/me/setting', '\App\Http\Controllers\UserController@settingSto
 
 
 //Article section
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PostController@index');
 
 //The page of articles list
 Route::get('/posts', 'PostController@index');
