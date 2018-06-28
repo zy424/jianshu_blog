@@ -10,7 +10,7 @@
                 <a class="blog-nav-item" href="/posts/create">Create article</a>
             </li>
             <li>
-                <a class="blog-nav-item" href="/notices">Notice</a>
+                <a class="blog-nav-item" href="#">Notice</a>
             </li>
             <li>
                 <input name="query" type="text" value="" class="form-control" style="margin-top:10px" placeholder="search">
