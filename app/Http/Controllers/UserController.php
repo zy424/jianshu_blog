@@ -18,4 +18,20 @@ class UserController extends Controller
     public function settingStore() {
 
     }
+
+    //personal centre page
+    public function show() {
+        return view('user/show');
+    }
+
+    //focus on one user
+    public function fan() {
+
+    }
+
+    //cancel focus
+
+    public function unfan() {
+
+    }
 }

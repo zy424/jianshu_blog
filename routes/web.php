@@ -63,3 +63,9 @@ Route::post('/posts/{post}/comment','\App\Http\Controllers\PostController@commen
 //Like and unlike
 Route::get('/posts/{post}/like','\App\Http\Controllers\PostController@like');
 Route::get('/posts/{post}/unlike','\App\Http\Controllers\PostController@unlike');
+
+
+// Personal center
+Route::get('/user/{user}', '\App\Http\Controllers\UserController@show');
+Route::post('/user/{user}/fan', '\App\Http\Controllers\UserController@fan');
+Route::post('/user/{user}/unfan', '\App\Http\Controllers\UserController@unfan');
