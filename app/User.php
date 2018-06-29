@@ -31,7 +31,7 @@ class User extends Authenticatable
     public function doFan($uid) {
         $fan = new \App\Fan();
         $fan->star_id = $uid;
-        $this->stars()->save($fan);
+        return $this->stars()->save($fan);
     }
 
     //delete the focus
@@ -44,12 +44,12 @@ class User extends Authenticatable
     //if the user has been focused by the fan
 
     public function hasFan($uid) {
-        $this->fans()->where('fan_id', $uid)->count();
+        return $this->fans()->where('fan_id', $uid)->count();
     }
 
     //if the user focuses a star
     public function hasStar($uid) {
-        $this->stars()->where('star_id', $uid)->count();
+        return $this->stars()->where('star_id', $uid)->count();
     }
 
 

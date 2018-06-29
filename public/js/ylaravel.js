@@ -10357,11 +10357,11 @@ $(".like-button").click(function (event) {
                 }
 
                 target.attr("like-value", 0);
-                target.text("关注");
+                target.text("Following");
             }
         });
     } else {
-        // 取消关注
+        // 关注
         $.ajax({
             url: "/user/" + user_id + "/fan",
             method: "POST",
@@ -10374,7 +10374,7 @@ $(".like-button").click(function (event) {
                 }
 
                 target.attr("like-value", 1);
-                target.text("取消关注");
+                target.text("Unfollowing");
             }
         });
     }
