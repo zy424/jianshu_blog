@@ -27,4 +27,19 @@ class Post extends Model
         return $this->hasMany(\App\Like::class);
     }
 
+    //the articles that belong to one user
+    public function scopeAuthorBy(Builder $query, $user_id) {
+        return $query->where('user_id', $user_id);
+    }
+
+    public function postTopics() {
+        return $this->hasMany(\App\PostTopic::class, 'post_id', 'id');
+    }
+    //the articles that not belong to a topic
+    public function scopeTopicNotBy(Builder $query, $topic_id) {
+        return $query->doesntHave('postTopics', 'and', function($q) use($topic_id) {
+            $q->where('topic_id', $topic_id);
+        });
+    }
+
 }
