@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Model;
+use Illuminate\Database\Eloquent\Builder;
 
 //table => posts
 class Post extends Model
