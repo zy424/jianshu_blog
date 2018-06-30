@@ -20,18 +20,12 @@
         </div>
 
         <ul class="category-root list-group">
+            @foreach($topics as $topic)
             <li class="list-group-item">
-                <a href="#">Travel
-                </a>
+                <a href="{{$topic->id}}">{{$topic->name}}</a>
             </li>
-            <li class="list-group-item">
-                <a href="#">Relaxation
-                </a>
-            </li>
-            <li class="list-group-item">
-                <a href="#">Test
-                </a>
-            </li>
+
+            @endforeach
         </ul>
 
     </aside>
