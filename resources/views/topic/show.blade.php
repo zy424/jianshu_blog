@@ -19,6 +19,7 @@
                 </div>
                 <div class="modal-body">
                     <form action="/topic/{{$topic->id}}/submit" action="POST">
+                        {{csrf_field()}}
                         @foreach($myposts as $post)
                         <div class="checkbox">
                             <label>
@@ -27,7 +28,6 @@
                             </label>
                         </div>
                         @endforeach
-
                         <button type="submit" class="btn btn-default">Publish</button>
                     </form>
                 </div>
@@ -51,7 +51,7 @@
                     @endforeach
                 </div>
 
-            </div>
+            </div
             <!-- /.tab-content -->
         </div>
 
