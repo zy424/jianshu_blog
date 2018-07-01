@@ -74,3 +74,7 @@ Route::post('/user/{user}/unfan', '\App\Http\Controllers\UserController@unfan');
 Route::get('/topic/{topic}', '\App\Http\Controllers\TopicController@show');
 //publish articles
 Route::post('/topic/{topic}/submit', '\App\Http\Controllers\TopicController@submit');
+
+
+//admin route
+include_once('admin.php');
