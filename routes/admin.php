@@ -16,7 +16,8 @@ Route::group(['prefix' => 'admin'], function(){
     //logout action
     Route::get('/logout','\App\Admin\Controllers\LoginController@logout');
 
-    //first page
-    Route::get('/home','\App\Admin\Controllers\HomeController@index');
-
+    Route::group(['middleware' => 'auth:admin'], function(){
+        //first page
+        Route::get('/home','\App\Admin\Controllers\HomeController@index');
+    });
 });
