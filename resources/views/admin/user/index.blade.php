@@ -15,26 +15,24 @@
                     <!-- /.box-header -->
                     <div class="box-body">
                         <table class="table table-bordered">
-                            <tbody><tr>
+                            <tbody>
+                            <tr>
                                 <th style="width: 10px">#</th>
                                 <th>User name</th>
                                 <th>Action</th>
                             </tr>
+                            @foreach($users as $user)
                             <tr>
-                                <td>2.</td>
-                                <td>test1</td>
+                                <td>{{$user->id}}</td>
+                                <td>{{$user->name}}</td>
                                 <td>
-                                    <a type="button" class="btn" href="/admin/users/2/role" >Management </a>
+                                    <a type="button" class="btn" href="/admin/users/{{$user->id}}/role" >Role Management </a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>3.</td>
-                                <td>test2</td>
-                                <td>
-                                    <a type="button" class="btn" href="/admin/users/3/role" >Management</a>
-                                </td>
-                            </tr>
-                            </tbody></table>
+                            @endforeach
+                            </tbody>
+                        </table>
+                        {{$users->links()}}
                     </div>
 
                 </div>

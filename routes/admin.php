@@ -22,7 +22,7 @@ Route::group(['prefix' => 'admin'], function(){
         //user section
         Route::get('/users','\App\Admin\Controllers\UserController@index');
         Route::get('/users/create','\App\Admin\Controllers\UserController@create');
-        Route::get('/users/store','\App\Admin\Controllers\UserController@store');
+        Route::post('/users/store','\App\Admin\Controllers\UserController@store');
 
     });
 });
