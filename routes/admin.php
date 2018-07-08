@@ -31,12 +31,12 @@ Route::group(['prefix' => 'admin'], function(){
         Route::get('/roles/create','\App\Admin\Controllers\RoleController@create');
         Route::post('/roles/store','\App\Admin\Controllers\RoleController@store');
         Route::get('/roles/{role}/permission','\App\Admin\Controllers\RoleController@permission');
-        Route::post('/roles/{role}/permission','\App\Admin\Controllers\RoleControllerr@storePermission');
+        Route::post('/roles/{role}/permission','\App\Admin\Controllers\RoleController@storePermission');
 
         //Permission
         Route::get('/permissions','\App\Admin\Controllers\PermissionController@index');
         Route::get('/permissions/create','\App\Admin\Controllers\PermissionController@create');
-        Route::get('/roles/{role}/permission','\App\Admin\Controllers\RoleController@permission');
+        Route::post('/permissions/store', '\App\Admin\Controllers\PermissionController@store');
 
         //check articles section
         Route::get('/posts','\App\Admin\Controllers\PostController@index');

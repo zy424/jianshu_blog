@@ -41,7 +41,7 @@ class RoleController extends Controller
     public function permission(\App\AdminRole $role)
     {
         $permissions = \App\AdminPermission::all();
-        $myPermission = $role->permissions;
+        $myPermissions = $role->permissions;
         return view('admin/role/permission', compact('permissions', 'myPermissions', 'role'));
     }
 

@@ -20,11 +20,11 @@
                                 <th>Description</th>
                                 <th>Manage</th>
                             </tr>
-                            @foreach('$roles as $role')
+                            @foreach($roles as $role)
                             <tr>
                                 <td>{{$role->id}}.</td>
                                 <td>{{$role->name}}</td>
-                                <td>{{$role->permissiom}}</td>
+                                <td>{{$role->description}}</td>
                                 <td>
                                     <a type="button" class="btn" href="/admin/roles/{{$role->id}}/permission" >Permission Administration</a>
                                 </td>
