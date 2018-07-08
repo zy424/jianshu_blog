@@ -25,6 +25,8 @@ class AdminRole extends Model
     }
 
     //判断角色是否有权限
-    public function hasPermission($permission) {
+    public function hasPermission($permission)
+    {
         return $this->permissions->contains($permission);
+    }
 }

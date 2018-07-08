@@ -28,30 +28,7 @@
                                     <a type="button" class="btn" href="/admin/roles/1/permission" >Permission Administration</a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>2.</td>
-                                <td>post-manager</td>
-                                <td>Articles Administrator</td>
-                                <td>
-                                    <a type="button" class="btn" href="/admin/roles/2/permission" >Permission Administration</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3.</td>
-                                <td>topic-manager</td>
-                                <td>Topics Administrator</td>
-                                <td>
-                                    <a type="button" class="btn" href="/admin/roles/3/permission" >Permission Administration</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4.</td>
-                                <td>notice-manager</td>
-                                <td>Notices Administrator</td>
-                                <td>
-                                    <a type="button" class="btn" href="/admin/roles/4/permission" >Permission Administration</a>
-                                </td>
-                            </tr>
+                          
                             </tbody></table>
                     </div>
 

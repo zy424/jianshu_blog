@@ -15,6 +15,7 @@ class RoleController extends Controller
     //角色列表
     public function index()
     {
+        $roles = \App\AdminRole::paginate(10);
         return view("/admin/role/index");
     }
 
