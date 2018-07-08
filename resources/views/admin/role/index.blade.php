@@ -20,18 +20,20 @@
                                 <th>Description</th>
                                 <th>Manage</th>
                             </tr>
+                            @foreach('$roles as $role')
                             <tr>
-                                <td>1.</td>
-                                <td>sys-manager</td>
-                                <td>System Administrator</td>
+                                <td>{{$role->id}}.</td>
+                                <td>{{$role->name}}</td>
+                                <td>{{$role->permissiom}}</td>
                                 <td>
-                                    <a type="button" class="btn" href="/admin/roles/1/permission" >Permission Administration</a>
+                                    <a type="button" class="btn" href="/admin/roles/{{$role->id}}/permission" >Permission Administration</a>
                                 </td>
                             </tr>
-                          
-                            </tbody></table>
+                            @endforeach
+                            </tbody>
+                        </table>
                     </div>
-
+                    {{$roles->links()}}
                 </div>
             </div>
         </div>

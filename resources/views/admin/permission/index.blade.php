@@ -20,37 +20,19 @@
                                     <th>Description</th>
                                     <th>Manage</th>
                                 </tr>
+                                @foreach($permissions as $permission)
                                 <tr>
-                                    <td>1.</td>
-                                    <td>system</td>
-                                    <td>System Administration</td>
+                                    <td>{{$permission->id}}</td>
+                                    <td>{{$permission->name}}</td>
+                                    <td>{{$permission->description}}</td>
                                     <td>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>2.</td>
-                                    <td>post</td>
-                                    <td>Articles Administration</td>
-                                    <td>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3.</td>
-                                    <td>topic</td>
-                                    <td>Topics Administration</td>
-                                    <td>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>4.</td>
-                                    <td>notice</td>
-                                    <td>Notices Administration</td>
-                                    <td>
-                                    </td>
-                                </tr>
-                                </tbody></table>
+                                @endforeach
+                                </tbody>
+                            </table>
                         </div>
-
+                        {{$permissions->links()}}
                     </div>
                 </div>
             </div>
