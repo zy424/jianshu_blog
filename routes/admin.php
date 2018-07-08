@@ -23,9 +23,24 @@ Route::group(['prefix' => 'admin'], function(){
         Route::get('/users','\App\Admin\Controllers\UserController@index');
         Route::get('/users/create','\App\Admin\Controllers\UserController@create');
         Route::post('/users/store','\App\Admin\Controllers\UserController@store');
+        Route::get('/users/{user}/role','\App\Admin\Controllers\UserController@role');
+        Route::post('/users/{user}/role','\App\Admin\Controllers\UserController@storeRole');
+
+        //roles
+        Route::get('/roles','\App\Admin\Controllers\RoleController@index');
+        Route::get('/roles/create','\App\Admin\Controllers\RoleController@create');
+        Route::post('/roles/store','\App\Admin\Controllers\RoleController@store');
+        Route::get('/roles/{role}/permission','\App\Admin\Controllers\RoleController@permission');
+        Route::post('/roles/{role}/permission','\App\Admin\Controllers\RoleControllerr@storePermission');
+
+        //Permission
+        Route::get('/permissions','\App\Admin\Controllers\PermissionController@index');
+        Route::get('/permissions/create','\App\Admin\Controllers\PermissionController@create');
+        Route::get('/roles/{role}/permission','\App\Admin\Controllers\RoleController@permission');
 
         //check articles section
         Route::get('/posts','\App\Admin\Controllers\PostController@index');
         Route::post('/posts/{post}/status','\App\Admin\Controllers\PostController@status');
+
     });
 });
