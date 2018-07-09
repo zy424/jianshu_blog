@@ -223,3 +223,13 @@ h6, .h6 {
     font-size: 14px;
     font-weight:bold;
 }
+
+.welcome-message {
+    text-align: center;
+    font-size:32px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color:#4f8cb8;
+    margin-top:50px;
+
+}

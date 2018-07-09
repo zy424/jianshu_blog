@@ -5,9 +5,9 @@
     <section class="content">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-            <div class="col-lg-3 col-xs-6">
+            <div class="welcome-message">
                 <!-- small box -->
-                欢迎
+                Welcome to yiBlog backend management platform!
             </div>
         </div>
     </section>
