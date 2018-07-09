@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/adminlte/dist/css/AdminLTE.min.css">
     <!-- iCheck -->
     <link rel="stylesheet" href="/adminlte/plugins/iCheck/square/blue.css">
+    <link href="/css/blog.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,7 +29,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="/adminlte/index2.html">yiBlog Backend Management Platform</a>
+        <a href="/adminlte/index2.html" class="login-message">yiBlog Backend Management Platform</a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">

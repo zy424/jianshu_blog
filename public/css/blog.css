@@ -231,5 +231,17 @@ h6, .h6 {
     font-weight: bold;
     color:#4f8cb8;
     margin-top:50px;
+}
 
+.login-message {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color:#4f8cb8;
+}
+
+.login-logo a, .register-logo a {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color:#4f8cb8;
+    font-size:30px;
 }
