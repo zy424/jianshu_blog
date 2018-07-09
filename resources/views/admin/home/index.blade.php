@@ -7,7 +7,7 @@
         <div class="row">
             <div class="welcome-message">
                 <!-- small box -->
-                Welcome to yiBlog backend management platform!
+                Welcome to yiBlog Admin Platform!
             </div>
         </div>
     </section>

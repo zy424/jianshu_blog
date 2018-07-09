@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="csrf-token" content="{{ csrf_token()}}">
-    <title>AdminLTE 2 | Dashboard</title>
+    <title>yiBlog | Admin</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -84,7 +84,10 @@
 <!-- Slimscroll -->
 <script src="/adminlte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
+<!-- AdminLTE App -->
+<script src="/adminlte/dist/js/app.min.js"></script>
 <script src="/adminlte/plugins/fastclick/fastclick.js"></script>
+<script src="/adminlte/dist/js/demo.js"></script>
 <script src="/js/admin.js"></script>
 </body>
 </html>
