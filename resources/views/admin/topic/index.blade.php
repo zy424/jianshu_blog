@@ -20,21 +20,17 @@
                                     <th>Name</th>
                                     <th>Operate</th>
                                 </tr>
+                                @foreach($topics as $topic)
                                 <tr>
-                                    <td>1</td>
-                                    <td>旅游</td>
+                                    <td>{{$topic->id}}</td>
+                                    <td>{{$topic->name}}</td>
                                     <td>
-                                        <a type="button" class="btn resource-delete" delete-url="/admin/topics/1" href="#" >Delete</a>
+                                        <a type="button" class="btn resource-delete" delete-url="/admin/topics/{{$topic->id}}" href="#" >Delete</a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>轻松</td>
-                                    <td>
-                                        <a type="button" class="btn resource-delete" delete-url="/admin/topics/2" href="#" >删除</a>
-                                    </td>
-                                </tr>
-                                </tbody></table>
+                                @endforeach
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
