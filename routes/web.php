@@ -75,6 +75,8 @@ Route::get('/topic/{topic}', '\App\Http\Controllers\TopicController@show');
 //publish articles
 Route::post('/topic/{topic}/submit', '\App\Http\Controllers\TopicController@submit');
 
+//notice page
+Route::get('/notices', '\App\Http\Controllers\NoticeController@index');
 
 //admin route
 include_once('admin.php');
