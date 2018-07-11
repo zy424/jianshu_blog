@@ -5,6 +5,7 @@ namespace App;
 use App\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+
 //table => users
 class User extends Authenticatable
 {
@@ -62,8 +63,7 @@ class User extends Authenticatable
     //用户收到的通知
     public function notices()
     {
-        return $this->belongsToMany(\App\Notice::class, 'user_notice', 'user_id', 'notice_id')
-            ->withPivot(['user_id', 'notice_id']);
+        return $this->belongsToMany(\App\Notice::class, 'user_notice', 'user_id', 'notice_id')->withPivot(['user_id', 'notice_id']);
     }
 
     //给用户增加通知
