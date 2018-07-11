@@ -22,7 +22,7 @@ class SendMessage implements ShouldQueue
      */
     public function __construct(\App\Notice $notice)
     {
-       
+
         $this->notice = $notice;
     }
 

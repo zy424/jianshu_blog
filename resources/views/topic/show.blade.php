@@ -51,7 +51,7 @@
                     @endforeach
                 </div>
 
-            </div
+            </div>
             <!-- /.tab-content -->
         </div>
 
