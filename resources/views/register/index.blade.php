@@ -12,6 +12,7 @@
     <title>Register</title>
 
     <!-- Bootstrap core CSS -->
+    <link href="/css/blog.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

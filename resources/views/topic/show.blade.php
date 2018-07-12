@@ -2,14 +2,14 @@
 
 @section("content")
 
-    <div class="col-sm-8">
+    <div class="col-sm-8 blog-main">
         <blockquote>
             <p>{{$topic->name}}</p>
             <footer>Articles：{{$topic->post_topics_count}}</footer>
             <br>
             <button class="btn btn-default topic-submit"  data-toggle="modal" data-target="#topic_submit_modal" topic-id="{{$topic->id}}"  type="button">Publish</button>
         </blockquote>
-    </div>
+
     <div class="modal fade" id="topic_submit_modal" tabindex="-1" role="dialog" >
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -34,7 +34,7 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-8 blog-main">
+    <div class="col-sm-8">
         <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">Articles</a></li>
@@ -57,6 +57,8 @@
 
 
     </div><!-- /.blog-main -->
+    </div>
+
 @endsection
 
 

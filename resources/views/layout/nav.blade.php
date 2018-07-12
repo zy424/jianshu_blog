@@ -9,9 +9,11 @@
             <li>
                 <a class="blog-nav-item" href="/posts/create">Create article</a>
             </li>
+            @if($user)
             <li>
                 <a class="blog-nav-item" href="/notices">Notice</a>
             </li>
+            @endif
             <li>
                 <input name="query" type="text" value="" class="form-control" style="margin-top:10px" placeholder="search">
             </li>
@@ -34,6 +36,14 @@
                     </div>
                 </li>
             </ul>
+        @else
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="blog-nav-item" href="/login"><span class="glyphicon glyphicon-log-in"></span> login</a></li>
+                <li>
+                    <a class="blog-nav-item" href="/register"><span class="glyphicon glyphicon-registration-mark"></span> register</a>
+                </li>
+            </ul>
+
         @endif
     </div>
 </div>

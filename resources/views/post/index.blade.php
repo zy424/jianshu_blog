@@ -11,16 +11,17 @@
                         <li data-target="#carousel-example" data-slide-to="2"></li>
                     </ol><!-- Wrapper for slides -->
                     <div class="carousel-inner">
+
+                        <div class="item">
+                            <img src="https://images.pexels.com/photos/1020323/pexels-photo-1020323.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" alt="..." />
+                            <div class="carousel-caption">...</div>
+                        </div>
+                        <div class="item">
+                            <img src="https://images.pexels.com/photos/1038670/pexels-photo-1038670.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" alt="..." />
+                            <div class="carousel-caption">...</div>
+                        </div>
                         <div class="item active">
-                            <img src="http://ww1.sinaimg.cn/large/44287191gw1excbq6tb3rj21400migrz.jpg" alt="..." />
-                            <div class="carousel-caption">...</div>
-                        </div>
-                        <div class="item">
-                            <img src="http://ww3.sinaimg.cn/large/44287191gw1excbq5iwm6j21400min3o.jpg" alt="..." />
-                            <div class="carousel-caption">...</div>
-                        </div>
-                        <div class="item">
-                            <img src="http://ww2.sinaimg.cn/large/44287191gw1excbq4kx57j21400migs4.jpg" alt="..." />
+                            <img src="https://images.pexels.com/photos/990819/pexels-photo-990819.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940" alt="..." />
                             <div class="carousel-caption">...</div>
                         </div>
                     </div>
