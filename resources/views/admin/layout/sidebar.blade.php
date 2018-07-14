@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
@@ -5,7 +9,7 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             @can('system')
-            <li class="treeview active">
+            <li class="treeview {{ (Request::is('admin/permissions') ||  Request::is('admin/users') ||  Request::is('admin/roles'))? 'active' : '' }}">
                 <a href="#">
                     <i class="fa fa-dashboard"></i> <span>Platform Management</span>
                     <span class="pull-right-container"></span>
@@ -18,7 +22,7 @@
             </li>
             @endcan
             @can('post')
-            <li class="active treeview">
+            <li class="{{ Request::is('admin/posts')? 'active' : '' }}">
                 <a href="/admin/posts">
                     <i class="fa fa-dashboard"></i> <span>Articles Management</span>
                 </a>
@@ -26,7 +30,7 @@
             @endcan
 
             @can('topic')
-            <li class="active treeview">
+            <li class="{{ Request::is('admin/topics')? 'active' : '' }}">
                 <a href="/admin/topics">
                     <i class="fa fa-dashboard"></i> <span>Topics Management</span>
                 </a>
@@ -34,7 +38,7 @@
             @endcan
 
             @can('notice')
-            <li class="active treeview">
+            <li class="{{ Request::is('admin/notices')? 'active' : '' }}">
                 <a href="/admin/notices">
                     <i class="fa fa-dashboard"></i> <span>Notice Management</span>
                 </a>

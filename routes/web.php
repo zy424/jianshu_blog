@@ -26,9 +26,9 @@ Route::post('/login', '\App\Http\Controllers\LoginController@login');
 Route::get('/logout', '\App\Http\Controllers\LoginController@logout');
 
 //personal setting page
-Route::get('/user/me/setting', '\App\Http\Controllers\UserController@setting');
+Route::get('/user/{user}/setting', '\App\Http\Controllers\UserController@setting');
 //personal setting operation
-Route::post('/user/me/setting', '\App\Http\Controllers\UserController@settingStore ');
+Route::post('/user/{user}/setting', '\App\Http\Controllers\UserController@settingStore');
 
 
 

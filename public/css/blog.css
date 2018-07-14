@@ -255,3 +255,24 @@ h6, .h6 {
     margin-top: 10px;
 }
 
+#sidebar .panel-heading {
+    font-size:17.5px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #337ab7;
+}
+
+#sidebar .panel-content {
+    font-size: 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #337ab7;
+}
+
+#sidebar a {
+    color: #333;
+}
+
+#sidebar a:hover {
+    text-decoration: none;
+    color: #337ab7;
+}
+

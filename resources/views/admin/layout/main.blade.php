@@ -89,5 +89,6 @@
 <script src="/adminlte/plugins/fastclick/fastclick.js"></script>
 <script src="/adminlte/dist/js/demo.js"></script>
 <script src="/js/admin.js"></script>
+
 </body>
 </html>

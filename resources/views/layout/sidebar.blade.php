@@ -3,7 +3,7 @@
 
     <aside id="widget-welcome" class="widget panel panel-default">
         <div class="panel-heading">
-            Welcome！
+            Welcome
         </div>
         <div class="panel-body">
             <p>
