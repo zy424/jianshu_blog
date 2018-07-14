@@ -11,7 +11,7 @@
                 <br>
                 @include('user.badges.like', ['target_user'=>$user])
             </blockquote>
-        </div>
+
         <div class="col-sm-8 blog-main">
             <div class="nav-tabs-custom">
                 <ul class="nav nav-tabs">
@@ -53,7 +53,7 @@
                 </div>
                 <!-- /.tab-content -->
             </div>
-
+        </div>
 
         </div><!-- /.blog-main -->
     @endsection

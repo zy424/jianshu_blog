@@ -10358,7 +10358,7 @@ $(".post-audit").click(function (event) {
 });
 
 $(".resource-delete").click(function (event) {
-    if (confirm("Are you sure to delete the article?") == false) {
+    if (confirm("Are you sure to delete it?") == false) {
         return;
     }
 

@@ -35,4 +35,14 @@ class NoticeController extends Controller
         return redirect('/admin/notices');
     }
 
+    public function destroy(\App\Notice $notice)
+    {
+        $notice->delete();
+
+        return [
+            'error' => '0',
+            'message' => ''
+        ];
+    }
+
 }

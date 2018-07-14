@@ -24,7 +24,9 @@
                             <tr>
                                 <td>{{$notice->id}}</td>
                                 <td>{{$notice->title}}</td>
-                                <td></td>
+                                <td>
+                                    <a type="button" class="btn resource-delete" delete-url="/admin/notices/{{$notice->id}}" href="#" >Delete</a>
+                                </td>
                             </tr>
                             @endforeach
                             </tbody>
