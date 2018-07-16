@@ -24,6 +24,9 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if (\App::runningInConsole()) {
+            echo 'Running in console (i.e. migration). Disabling AuthServiceProvider' . PHP_EOL; return;
+        }
         $this->registerPolicies();
 
         $permissions = \App\AdminPermission::all();
