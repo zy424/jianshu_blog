@@ -1,5 +1,5 @@
 # Yi Blog
-Yi Blog is a blog system built based [Laravel](https://laravel.com/), [Bootstrap](https://getbootstrap.com/), [jQuery](https://jquery.com/) and [AdminLTE](https://adminlte.io/themes/AdminLTE/index2.html)
+Yi Blog is a blog system built based on [Laravel](https://laravel.com/), [Bootstrap](https://getbootstrap.com/), [jQuery](https://jquery.com/) and [AdminLTE](https://adminlte.io/themes/AdminLTE/index2.html)
 
 ## Environment
 
